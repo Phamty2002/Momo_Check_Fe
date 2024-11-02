@@ -26,7 +26,6 @@ function CheckMomo() {
 
     try {
       const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/check-momo`, {
-        access_token: process.env.REACT_APP_ACCESS_TOKEN,
         phone: phone
       }, {
         headers: {
