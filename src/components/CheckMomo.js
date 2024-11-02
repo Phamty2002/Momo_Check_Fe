@@ -36,12 +36,25 @@ function CheckMomo() {
       // Kiểm tra giá trị của 'error' trong phản hồi
       if (response.data.error === 0 && response.data.name) {
         setResult(response.data);
+      } else if (response.data.message) {
+        setError(response.data.message);
       } else {
         setError('Số điện thoại không được đăng kí Momo.');
       }
     } catch (err) {
       console.error(err);
-      setError('Đã xảy ra lỗi khi gọi API.');
+
+      // Kiểm tra lỗi phản hồi từ backend
+      if (err.response) {
+        // Yêu cầu đã được gửi và server đã phản hồi với mã trạng thái khác 2xx
+        setError(err.response.data.message || 'Đã xảy ra lỗi khi gọi API.');
+      } else if (err.request) {
+        // Yêu cầu đã được gửi nhưng không nhận được phản hồi
+        setError('Không thể kết nối đến server. Vui lòng thử lại sau.');
+      } else {
+        // Một lỗi xảy ra khi thiết lập yêu cầu
+        setError('Đã xảy ra lỗi khi thiết lập yêu cầu.');
+      }
     } finally {
       setLoading(false);
     }
