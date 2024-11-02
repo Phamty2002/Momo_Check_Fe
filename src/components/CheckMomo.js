@@ -16,10 +16,10 @@ function CheckMomo() {
     const handleCheckMomo = async (e) => {
         e.preventDefault();
 
-        // Kiểm tra định dạng số điện thoại (ví dụ: 10 chữ số)
-        const phoneRegex = /^\d{10}$/;
+        // Kiểm tra định dạng số điện thoại (cho phép có dấu + ở đầu và từ 9 đến 15 chữ số)
+        const phoneRegex = /^\+?\d{9,15}$/;
         if (!phoneRegex.test(phone)) {
-            setError(<span>Vui lòng nhập số điện thoại hợp lệ (<strong>10 chữ số</strong>).</span>);
+            setError(<span>Vui lòng nhập số điện thoại hợp lệ (<strong>từ 9 đến 15 chữ số</strong>, có thể bắt đầu bằng <strong>+</strong>).</span>);
             return;
         }
 
