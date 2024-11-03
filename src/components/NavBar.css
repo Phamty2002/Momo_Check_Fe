@@ -61,10 +61,19 @@ body {
 }
 
 .navbar .navbar-brand {
+    display: flex;
+    align-items: center;
     font-size: 22px;
     font-weight: 700;
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+.navbar-logo {
+    width: 30px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle;
 }
 
 .navbar .navbar-brand:hover {
@@ -105,11 +114,4 @@ body {
         font-size: 12px;
         padding: 6px 12px;
     }
-}
-
-.navbar-logo {
-    width: 30px; /* Adjust size as needed */
-    height: auto;
-    margin-right: 10px; /* Space between logo and text */
-    vertical-align: middle;
 }
