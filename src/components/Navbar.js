@@ -22,11 +22,11 @@ function NavBar() {
             <div className="navbar-right">
                 {user ? (
                     <>
-                        {/* <Link to="/profile">Profile</Link> */} {/* Đã ẩn liên kết Profile */}
-                        <button onClick={handleLogout}>Đăng Xuất</button>
+                        {/* <Link to="/profile">Profile</Link> */} {/* Hidden Profile Link */}
+                        <button onClick={handleLogout} className="navbar-button">Đăng Xuất</button>
                     </>
                 ) : (
-                    <Link to="/login">Đăng Nhập</Link>
+                    <Link to="/login" className="navbar-link">Đăng Nhập</Link>
                 )}
             </div>
         </nav>
