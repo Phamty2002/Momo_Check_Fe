@@ -106,3 +106,10 @@ body {
         padding: 6px 12px;
     }
 }
+
+.navbar-logo {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+    vertical-align: middle;
+}
