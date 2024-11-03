@@ -17,7 +17,7 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="navbar-left">
-                {user && <Link to="/" className="navbar-brand">Momo_Check</Link>}
+                {user && <Link to="/" className="navbar-brand">Momo Checking</Link>}
             </div>
             <div className="navbar-right">
                 {user ? (
