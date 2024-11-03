@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import { AuthContext } from '../contexts/AuthContext';
-import logo from '../public/logo1.png'; // Import the logo
 
 function NavBar() {
     const { user, logout } = useContext(AuthContext);
@@ -20,7 +19,7 @@ function NavBar() {
             <div className="navbar-left">
                 {user && (
                     <Link to="/" className="navbar-brand">
-                        <img src={logo} alt="Logo" className="navbar-logo" /> {/* Logo */}
+                        <img src="/logo1.png" alt="Logo" className="navbar-logo" /> {/* Direct path to public folder */}
                         Momo Checking
                     </Link>
                 )}
