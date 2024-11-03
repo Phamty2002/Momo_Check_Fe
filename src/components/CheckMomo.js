@@ -116,7 +116,7 @@ function CheckMomo() {
             {result && (
                 <div className="result-container">
                     <p className="result-text">
-                        Số điện thoại <strong>{result.phone}</strong> đã được đăng ký Momo với tên: <strong>{result.name}</strong>.
+                        Số điện thoại <strong>{result.phone}</strong> đã được đăng ký Momo với tên: <strong>{result.name}</strong>
                     </p>
                 </div>
             )}
